@@ -120,9 +120,10 @@ exports.postSignup = (req, res, next) => {
  * Profile page.
  */
 exports.getAccount = (req, res) => {
-  res.render('account/profile', {
-    title: 'Account Management'
-  });
+  res.json(req.user);
+  // res.render('account/profile', {
+  //   title: 'Account Management'
+  // });
 };
 
 /**
